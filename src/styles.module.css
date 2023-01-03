@@ -1,5 +1,32 @@
 @import "index.css";
 
+
+
+.buttonInTheCard {
+    width: 103px;
+    height: 28px;
+    position: relative;
+    z-index: 0;
+}
+.buttonInTheCard:before {
+
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    padding: 1px;
+    border-radius: 30px;
+    background: var(--gradient-primary);
+    -webkit-mask: 
+       linear-gradient(#fff 0 0) content-box, 
+       linear-gradient(#fff 0 0);
+            mask: 
+       linear-gradient(#fff 0 0) content-box, 
+       linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+}
+
 .btn {
     background: var(--gradient-primary);
     border-radius: 30px;
@@ -20,15 +47,16 @@
     /* Gradient */
     background: linear-gradient(90.05deg, #2E89DC -26.13%, #4361EE 30.71%, #FB6F92 102.5%);
 }
+
 .footer-links {
-	display: flex;	
+    display: flex;
     flex-direction: column;
-	padding-top: 20px;
-    
-}
-.footer-links > a{
-    color: white;
-    font-size: 14px; 
-    margin-top: 5px;   
+    padding-top: 20px;
+
 }
 
+.footer-links>a {
+    color: white;
+    font-size: 14px;
+    margin-top: 5px;
+}

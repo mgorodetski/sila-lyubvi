@@ -7,10 +7,13 @@ body,
   height: 100%;
   width: 100%;
   font-family: "Inter", sans-serif;
+  color: #454444;
   margin: 0;
 }
 
 :root {
+  --main-text-color: #454444;
+  --secondary-text-color: #A3A2A2;
   --blue-light-custom: #2E89DC;
   --blue-dark-custom: #4361EE;
   --tomato-custom: #FB6F92;
