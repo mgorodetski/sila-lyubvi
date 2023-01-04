@@ -3,11 +3,16 @@
 
 
 .buttonInTheCard {
+    vertical-align: middle;
+    text-align: center;
+    font-size: 14px;
     width: 103px;
     height: 28px;
+    line-height: 28px;
     position: relative;
     z-index: 0;
 }
+
 .buttonInTheCard:before {
 
     content: "";
@@ -17,14 +22,14 @@
     padding: 1px;
     border-radius: 30px;
     background: var(--gradient-primary);
-    -webkit-mask: 
-       linear-gradient(#fff 0 0) content-box, 
-       linear-gradient(#fff 0 0);
-            mask: 
-       linear-gradient(#fff 0 0) content-box, 
-       linear-gradient(#fff 0 0);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
-            mask-composite: exclude;
+    mask-composite: exclude;
 }
 
 .btn {

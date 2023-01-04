@@ -1,5 +1,6 @@
 import { Box, Button } from '@mui/material'
 import React from 'react'
+import CustomButton from '../components/CustomButton'
 
 const About = () => {
     return (
@@ -15,25 +16,16 @@ const About = () => {
                 <div>
                     <h3 className="title-h3" style={{ marginTop: '300px' }}>Проект движения Сила Любви</h3>
                     <p className="title-text">Цель проекта “Сила взаимопомощи” в развитие социальной сети взаимоподдержки. Здесь вы сможете искать партнеров для коммерческого или социального проекта, принять участие в группе психологической помощи, узнавать о новых интересных культурных событиях или предложить свое, а также получать полезную информацию по психологии и другим направлениям.</p>
-                    <Button
+                    <CustomButton
+                    
+                        title={'ПРИСОЕДИНИТЬСЯ'}
                         style={{
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            padding: '22px 30px',
-                            gap: '30px',
-
                             width: '204px',
                             height: '61px',
-
-                            background: 'linear-gradient(90.05deg, #2E89DC -26.13%, #4361EE 30.71%, #FB6F92 102.5%)',
-                            borderRadius: '30px',
-                            color: '#F2F2F2',
-                            fontFamily: 'Inter',
-                            fontStyle: 'normal',
                             fontSize: '14px',
                             lineHeight: '17px'
                         }}
-                    >ПРИСОЕДИНИТЬСЯ</Button>
+                    >ПРИСОЕДИНИТЬСЯ</CustomButton>
                 </div>
             </div>
             <div>

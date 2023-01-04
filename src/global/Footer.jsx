@@ -2,6 +2,7 @@ import { Box, Button, IconButton, Link } from '@mui/material'
 import React from 'react'
 import logo from '../img/logoDefault.png';
 import { YouTube, Telegram } from '@mui/icons-material';
+import CustomButton from '../components/CustomButton';
 
 const Footer = () => {
     const linkStyle = {
@@ -25,20 +26,19 @@ const Footer = () => {
                         height: 83
                     }}
                     src={logo} alt="Логотип Сила Любви" />
-                <Button
+                <CustomButton
+                    title={'ОБРАТНАЯ СВЯЗЬ'}
                     style={{
                         fontSize: "12px",
-                        color: 'black',
-                        padding: '22px 30px',
+                        color: 'var(--main-text-color)',
                         marginTop: '47px',
                         marginRight: '224px',
                         gap: 30,
                         width: 187,
                         height: 61,
-                        backgroundColor: '#FFFFFF',
-                        borderRadius: 30
+                        background: '#FFFFFF',
                     }}
-                >ОБРАТНАЯ СВЯЗЬ</Button>
+                />
             </div>
             <div
                 style={{

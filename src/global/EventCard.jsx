@@ -3,17 +3,12 @@ import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import { Button, CardActionArea } from '@mui/material';
-import styles from '../styles.module.css';
+import moduleStyles from '../styles.module.css';
 
 
-export default function EventCard() {
+const EventCard = ({ handleClick, styles }) => { //' 'style' doesn't work'
   return (
-    <div className='card' style={{
-
-      maxHeight: '640px',
-      maxWwidth: '670px',
-      margin: '10px'
-    }}>
+    <div className='card' style={styles}>
       <Card
         classes={{ root: 'cardBorder' }}>
         <CardActionArea sx={{ fontFamily: 'Inter' }}>
@@ -40,14 +35,12 @@ export default function EventCard() {
               display: 'flex',
               flexDirection: 'row',
               justifyContent: 'flex-end',
-            }}><Button
-              className={`${styles.buttonInTheCard}`}
-              sx={{
-                textTransform: 'none',
-                color: 'var(--main-text-color)',
-                fontSize: '14px'
-              }}
-            >Бесплатно</Button></div>
+            }}>
+              <div
+                className={`${moduleStyles.buttonInTheCard}`}
+                onClick={()=>alert("")}
+              >Бесплатно</div>
+            </div>
             <p
               style={{
                 padding: 0,
@@ -101,3 +94,5 @@ export default function EventCard() {
     </div >
   );
 }
+
+export default EventCard

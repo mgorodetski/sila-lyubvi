@@ -24,37 +24,90 @@ const CulturalEvents = () => {
             />
         );
     }
+    const stylesCardImportantEvents = {
+        maxHeight: '640px',
+        maxWwidth: '670px',
+        margin: '10px'
+    }
+    const stylesCardCloserEvents = {
+        width: '427px',
+        height: '550px',
+        margin: '10px'
+    }
     return (
         <div className='mainPageCulturalEvents'>
             <h2 className="title-h2" >Культурные <span className='gradientText'>мероприятия</span></h2>
             <h3 className="title-h3" >Важные события</h3>
 
             <Divider classes={{ root: 'mydivider' }} />
-            <div className='carouselWrapper'
-            // display='flex' justifyContent='center' marginTop='50px' maxWidth='1000px'
-            >
-                <Carousel width='1200px'
+            <div className='carouselWrapper' >
+                <Carousel
                     // dots={true}
                     infinite={true}
                     speed={500}
                     slidesToShow={2}
                     slidesToScroll={1}
                     className={"center"}
-                    // fade={true}
                     display='true'
-                    // width={1000}
                     centerMode={true}
                     centerPadding={"0px"}
                     nextArrow={<SampleNextArrow />}
                     prevArrow={<SamplePrevArrow />}
                 >
-                    <EventCard />
+                    <EventCard
+                        styles={stylesCardImportantEvents}
+                    />
 
-                    <EventCard />
-                    <EventCard />
-                    <EventCard />
-                    <EventCard />
+                    <EventCard
+                        styles={stylesCardImportantEvents}
+                    />
+                    <EventCard
+                        styles={stylesCardImportantEvents}
+                    />
+                    <EventCard
+                        styles={stylesCardImportantEvents}
+                    />
+                    <EventCard
+                        styles={stylesCardImportantEvents}
+                    />
                 </Carousel>
+            </div>
+
+            <h3 className="title-h3" >Ближайшие события</h3>
+            <Divider classes={{ root: 'mydivider' }} />
+            <div >
+                <div style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                }}>
+                    <EventCard
+                        styles={stylesCardCloserEvents}
+                    />
+
+                    <EventCard
+                        styles={stylesCardCloserEvents}
+                    />
+                    <EventCard
+                        styles={stylesCardCloserEvents}
+                    />
+                </div>
+                <div style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                }}>
+                    <EventCard
+                        styles={stylesCardCloserEvents}
+                    />
+
+                    <EventCard
+                        styles={stylesCardCloserEvents}
+                    />
+                    <EventCard
+                        styles={stylesCardCloserEvents}
+                    />
+                </div>
             </div>
         </div >
     )
