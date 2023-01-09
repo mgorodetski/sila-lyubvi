@@ -90,9 +90,8 @@
 }
 
 .title-h2 {
-    width: 725px;
-    height: 62px;
-
+    max-width: 725px;
+    padding-top: 40px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
@@ -113,7 +112,7 @@
     font-style: normal;
     font-weight: 500;
     font-size: 35px;
-    line-height: 130%;
+    /* line-height: 130%; */
     /* or 45px */
 
     /* color: var(--main-text-color); */
