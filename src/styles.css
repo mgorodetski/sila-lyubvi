@@ -151,10 +151,9 @@
 
 /* Footer */
 .box-footer {
-    width: 100%;
+    padding-left: 101px;
+    border-radius: 40px 40px 0px 0px;
     min-height: 389px;
-    /* left: 0px;
-    top: 6373px; */
 
     /* Gradient */
     background: var(--gradient-primary)
@@ -163,12 +162,12 @@
 .footer-links {
     display: flex;
     flex-direction: column;
-    padding-top: 20px;
+    padding-bottom: 20px;
 
 }
 
 .footer-links>a {
     color: white;
     font-size: 14px;
-    margin-top: 5px;
+    padding-bottom: 14px;
 }
