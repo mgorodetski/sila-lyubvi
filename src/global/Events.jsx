@@ -1,12 +1,10 @@
-import { Box, Divider } from "@mui/material";
+import { Divider } from "@mui/material";
 import React from "react";
 import EventCard from "./EventCard";
-import logo from "../img/logo.svg";
 import Carousel from "react-slick";
 import CustomButton from "../components/CustomButton";
 
-const Events = ({ topic, subtopic1, subTopic2, discription, buttonTitle }) => {
-  console.log(discription);
+const Events = ({ topic, subtopic1, subtopic2, discription, buttonTitle }) => {
   function SampleNextArrow(props) {
     const { className, onClick } = props;
     return <button className={className} onClick={onClick} />;
@@ -76,7 +74,7 @@ const Events = ({ topic, subtopic1, subTopic2, discription, buttonTitle }) => {
           </Carousel>
         </div>
 
-        <h3 className="title-h3">{subTopic2}</h3>
+        <h3 className="title-h3">{subtopic2}</h3>
         <Divider classes={{ root: "mydivider" }} />
         <div>
           <div

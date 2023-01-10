@@ -1,6 +1,7 @@
 import About from "./global/About";
 import Events from "./global/Events";
 import Footer from "./global/Footer";
+import InterestInBlog from "./global/InterestInBlog";
 import Topbar from "./global/TopBar";
 import './styles.css';
 import './styles.module.css';
@@ -24,10 +25,13 @@ function App() {
       <Events
         topic={{ word: "Деловое", wordGradient: "сотрудничество" }}
         subtopic1={"Важные проекты"}
-        subTopic2={"Другие проекты"}
-        discription={{discription, discription2}}
+        subtopic2={"Другие проекты"}
+        discription={{ discription, discription2 }}
         buttonTitle={"Каталог проектов"}
 
+      />
+      <InterestInBlog
+        subtopic1={"Интересное в блоге"}
       />
       <Footer />
     </div>
