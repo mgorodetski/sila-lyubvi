@@ -1,8 +1,8 @@
 import { Box, Divider, IconButton, Link } from "@mui/material";
 import React from "react";
-import logo from "../img/logoDefault.png";
+import logo from "../../img/logoDefault.png";
 import { YouTube, Telegram } from "@mui/icons-material";
-import CustomButton from "../components/CustomButton";
+import CustomButton from "./CustomButton";
 
 const Footer = () => {
   const linkStyle = {

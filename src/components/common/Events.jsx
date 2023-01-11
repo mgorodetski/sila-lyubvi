@@ -2,7 +2,7 @@ import { Divider } from "@mui/material";
 import React from "react";
 import EventCard from "./EventCard";
 import Carousel from "react-slick";
-import CustomButton from "../components/CustomButton";
+import CustomButton from "./CustomButton";
 
 const Events = ({ topic, subtopic1, subtopic2, discription, buttonTitle }) => {
   function SampleNextArrow(props) {

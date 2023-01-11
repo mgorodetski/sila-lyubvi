@@ -1,7 +1,7 @@
 import { Divider } from "@mui/material";
 import React from "react";
-import EventCard from "./EventCard";
-import arrow from "../img/arrow.jpg";
+import EventCard from "../common/EventCard";
+import arrow from "../../img/arrow.jpg";
 
 const InterestInBlog = ({ subtopic1 }) => {
   const stylesCardCloserEvents = {

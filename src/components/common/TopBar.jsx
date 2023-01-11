@@ -2,8 +2,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import { Box, IconButton, Typography } from '@mui/material';
 import InputBase from '@mui/material/InputBase';
 import React from 'react';
-import CustomButton from '../components/CustomButton';
-import logo from '../img/logo.svg';
+import CustomButton from './CustomButton';
+import logo from '../../img/logo.svg';
 
 
 const Topbar = () => {

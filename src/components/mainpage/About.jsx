@@ -1,7 +1,7 @@
-import { Box, Button } from '@mui/material'
+import { Box } from '@mui/material'
 import React from 'react'
-import CustomButton from '../components/CustomButton'
-import handImage from '../img/hands.jpg'
+import CustomButton from '../common/CustomButton'
+import handImage from '../../img/hands.jpg'
 
 
 const About = () => {

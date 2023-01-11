@@ -3,7 +3,7 @@ import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import { CardActionArea } from '@mui/material';
-import moduleStyles from '../styles.module.css';
+import moduleStyles from '../../styles.module.css';
 
 
 const EventCard = ({ handleClick, styles }) => { //' 'style' doesn't work'
