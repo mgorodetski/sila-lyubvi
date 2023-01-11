@@ -26,22 +26,24 @@ const Events = ({ topic, subtopic1, subtopic2, discription, buttonTitle }) => {
   };
   return (
     <div>
-      <div className="mainPageCulturalEvents">
+      <div className="pageStyle">
         <div>
           <h2 className="title-h2">
-            {topic.word}{" "}
+            {topic.word}
             <span className="gradientText">{topic.wordGradient}</span>
           </h2>
         </div>
         <div style={{ display: "flex", flexDirection: "row" }}>
-          <p style={{ width: "50%", fontSize: "28px", margin: 0 }}>
+          <p
+            className="title-h4"
+            style={{ width: "50%" }}
+          >
             {discription.discription}
           </p>
           <p
+          className="title-text"
             style={{
               width: "50%",
-              fontSize: "18px",
-              margin: 0,
               whiteSpace: "pre-line",
             }}
           >
@@ -51,6 +53,7 @@ const Events = ({ topic, subtopic1, subtopic2, discription, buttonTitle }) => {
         <h3 className="title-h3">{subtopic1}</h3>
 
         <Divider classes={{ root: "mydivider" }} />
+        <br/>
         <div className="carouselWrapper">
           <Carousel
             // dots={true}
@@ -76,6 +79,7 @@ const Events = ({ topic, subtopic1, subtopic2, discription, buttonTitle }) => {
 
         <h3 className="title-h3">{subtopic2}</h3>
         <Divider classes={{ root: "mydivider" }} />
+        <br/>
         <div>
           <div
             style={{

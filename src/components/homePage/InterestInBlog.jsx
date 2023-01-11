@@ -13,7 +13,7 @@ const InterestInBlog = ({ subtopic1 }) => {
   };
   return (
     <div>
-      <div className="mainPageCulturalEvents">
+      <div className="pageStyle">
         <div
           style={{
             display: "flex",
@@ -58,6 +58,7 @@ const InterestInBlog = ({ subtopic1 }) => {
           </div>
         </div>
         <Divider classes={{ root: "mydivider" }} />
+        <br/>
         <div>
           <div
             style={{

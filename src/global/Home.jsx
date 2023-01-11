@@ -1,21 +1,19 @@
-import React from 'react'
-import About from '../components/mainpage/About';
+import React from 'react';
+import About from '../components/homePage/About';
 import Events from '../components/common/Events';
-import Footer from '../components/common/Footer';
-import InterestInBlog from '../components/mainpage/InterestInBlog';
-import Topbar from '../components/common/TopBar';
+import InterestInBlog from '../components/homePage/InterestInBlog';
 
-const MainPage = () => {
+const Home = () => {
     const discription = "Мы стремимся развивать деловые связи между участниками сообщества.";
     const discription2 = "Здесь представлена информация o коммерческих и социальных проектах участниках сообщества, в которых вы можете принять участие. \n \n Если вы ищете партнеров или сотрудников для своего собственного проекта, вы можете опубликовать на сайте информацию о нем.";
     return (
       <div className="app">
-        <Topbar />
+        {/* <Topbar /> */}
         <About />
         <Events
           topic={{ word: "культурные", wordGradient: "мероприятия" }}
           subtopic1={"Важные события"}
-          subTopic2={"Ближайшие события"}
+          subtopic2={"Ближайшие события"}
           discription={""}
           buttonTitle={"Календарь мероприятий"}
         />
@@ -30,9 +28,9 @@ const MainPage = () => {
         <InterestInBlog
           subtopic1={"Интересное в блоге"}
         />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
 }
 
-export default MainPage
+export default Home

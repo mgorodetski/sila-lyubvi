@@ -61,11 +61,13 @@
     background-clip: content-box, border-box;
 }
 
-.mydivider.css-9mgopn-MuiDivider-root {
+.mydivider {
     width: 134px;
     height: 4px;
-    margin-bottom: 30px;
     /* Gradient */
+    
+}
+.mydivider-gradient{
     background: var(--gradient-primary);
 }
 
@@ -77,9 +79,6 @@
 .title-h1 {
     width: 801px;
     height: 214px;
-
-    font-family: 'Inter';
-    font-style: 'normal';
     font-weight: 700;
     font-size: 82px;
     line-height: 130%;
@@ -92,8 +91,6 @@
 .title-h2 {
     max-width: 725px;
     padding-top: 40px;
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 700;
     font-size: 48px;
     line-height: 130%;
@@ -108,23 +105,39 @@
     width: 533px;
     height: 45px;
     margin: 0;
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 500;
     font-size: 35px;
-    /* line-height: 130%; */
+    line-height: 130%;
     /* or 45px */
 
     /* color: var(--main-text-color); */
 }
 
+.title-h4 {
+    width: 487px;
+    height: 36px;
+    margin: 0;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 130%;
+    /* or 45px */
+
+    /* color: var(--main-text-color); */
+}
+.title-title {
+    padding-right: 10px;
+    margin: 0;
+    font-size: 20px;
+    line-height: 130%;
+}
+
 .title-text {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
+    padding-right: 10px;
+    margin: 0;
     font-size: 18px;
     line-height: 130%;
 }
+
 
 
 .gradientText {
@@ -143,8 +156,8 @@
     -moz-text-fill-color: transparent;
 }
 
-/* Cultural Events */
-.mainPageCulturalEvents {
+/* Events */
+.pageStyle {
     padding: 20px 101px
 }
 
