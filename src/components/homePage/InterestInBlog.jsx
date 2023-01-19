@@ -3,13 +3,14 @@ import React from "react";
 import EventCard from "../common/EventCard";
 import arrow from "../../img/arrow.jpg";
 
-const InterestInBlog = ({ subtopic1 }) => {
+const InterestInBlog = ({ CustomCard, subtopic1 }) => {
   const stylesCardCloserEvents = {
-    minHeight: "427px",
-    minWwidth: "550px",
-    margin: "10px",
+    minHeight: "450px",
+    minWwidth: "427px",
+    padding: "30px 30px 0px 30px",
     border: 'none',
-    boxShadow: 'none'
+    boxShadow: 'none',
+    // padding: '0'
   };
   return (
     <div>
@@ -19,6 +20,7 @@ const InterestInBlog = ({ subtopic1 }) => {
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-between",
+            
 
           }}
         >
@@ -58,19 +60,19 @@ const InterestInBlog = ({ subtopic1 }) => {
           </div>
         </div>
         <Divider classes={{ root: "mydivider" }} />
-        <br/>
         <div>
           <div
             style={{
               display: "flex",
               flexDirection: "row",
               justifyContent: "center",
+              marginLeft: "-30px",
             }}
           >
-            <EventCard styles={stylesCardCloserEvents} />
+            <CustomCard styles={stylesCardCloserEvents} />
 
-            <EventCard styles={stylesCardCloserEvents} />
-            <EventCard styles={stylesCardCloserEvents} />
+            <CustomCard styles={stylesCardCloserEvents} />
+            <CustomCard styles={stylesCardCloserEvents} />
           </div>
         </div>
       </div>

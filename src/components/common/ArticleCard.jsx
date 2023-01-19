@@ -7,25 +7,25 @@ import FavoriteIcon from "@mui/icons-material/FavoriteBorderRounded";
 import { CardActionArea, CardActions, IconButton } from "@mui/material";
 import moduleStyles from "../../styles.module.css";
 
-const EventCard = ({ handleClick, styles }) => {
+const ArticleCard = ({ handleClick, styles }) => {
   const data = {
     img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2532&q=80",
     title: "Title of EVENT",
-    city: "City of EVENT",
-    place: "Place of EVENT",
-    date: "Date of event",
     text: "Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, но является случайным... ",
-    organizator: "Organizator of event",
-    cost: "Бесплатно",
+    author: "Author",
+    date: "Date",
   };
   const favorite = true;
 
   //' 'style' doesn't work'
   return (
-    <div className="card" style={styles}>
+    <div style={styles}>
       <Card
-        classes={{ root: "cardBorder" }}
+        // classes={{ root: "cardBorder" }}
         sx={{
+          border: "none",
+          borderRadius: "0px",
+          boxShadow: "none",
           fontFamily: "Inter",
           maxHeight: styles.maxHeight,
           maxWidth: styles.maxWidth,
@@ -72,33 +72,16 @@ const EventCard = ({ handleClick, styles }) => {
               )}
             </IconButton>
           </CardActions>
-          <div
-            className={moduleStyles.costLabel}
-            style={{
-              position: "absolute",
-              bottom: "13px",
-              right: "13px",
-            }}
-          >
-            {data.cost}
-          </div>
+
           <CardMedia
             onClick={() => alert("media")}
             component="img"
             image="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2532&q=80"
             alt="Paella dish"
-            sx={{
-              maxHeight: "330px",
-              maxWidth: "624px",
-            }}
           />
         </div>
         <CardActionArea>
-          <CardContent
-            sx={{
-              padding: "25px",
-            }}
-          >
+          <CardContent sx={{ padding: 0 }}>
             <p
               style={{
                 padding: "15px 0 0",
@@ -110,43 +93,9 @@ const EventCard = ({ handleClick, styles }) => {
             >
               {data.title}
             </p>
-
             <p
               style={{
-                padding: "15px 0 0",
-                margin: 0,
-                fontSize: "16px",
-                lineHeight: "20px",
-                color: "var(--secondary-text-color)",
-              }}
-            >
-              {data.city}
-            </p>
-            <p
-              style={{
-                padding: "5px 0 0",
-                margin: 0,
-                fontSize: "14px",
-                lineHeight: "17px",
-                color: "var(--secondary-text-color)",
-              }}
-            >
-              {data.place}
-            </p>
-            <p
-              style={{
-                padding: "15px 0 0",
-                margin: 0,
-                fontSize: "16px",
-                lineHeight: "19px",
-                color: "var(--main-text-color)",
-              }}
-            >
-              {data.date}
-            </p>
-            <p
-              style={{
-                padding: "15px 0 0",
+                padding: "10px 0 0",
                 margin: 0,
                 fontSize: "14px",
                 lineHeight: "130%",
@@ -157,7 +106,7 @@ const EventCard = ({ handleClick, styles }) => {
             </p>
             <p
               style={{
-                paddingTop: "20px",
+                paddingTop: "15px",
                 margin: 0,
                 fontSize: "14px",
                 lineHeight: "17px",
@@ -165,7 +114,18 @@ const EventCard = ({ handleClick, styles }) => {
                 color: "var(--secondary-text-color)",
               }}
             >
-              {data.organizator}
+              {data.author}
+            </p>
+            <p
+              style={{
+                paddingTop: "15px",
+                margin: 0,
+                fontSize: "14px",
+                lineHeight: "130%",
+                color: "var(--main-text-color)",
+              }}
+            >
+              {data.date}
             </p>
           </CardContent>
         </CardActionArea>
@@ -174,4 +134,4 @@ const EventCard = ({ handleClick, styles }) => {
   );
 };
 
-export default EventCard;
+export default ArticleCard;

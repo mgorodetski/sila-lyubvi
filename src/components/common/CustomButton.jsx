@@ -1,16 +1,16 @@
-import styles from '../../styles.module.css'
+import styles from "../../styles.module.css";
 
 const CustomButton = ({ title, handleClick, style }) => {
-    return (
-        <button
-            type="button"
-            className={`${styles.btn}`}
-            style={style}
+  return (
+    <button
+      type="button"
+      className={`${styles.btn}`}
+      style={style}
+      onClick={handleClick}
+    >
+      {title}
+    </button>
+  );
+};
 
-            onClick={handleClick}>
-            {title}
-        </button>
-    )
-}
-
-export default CustomButton
+export default CustomButton;

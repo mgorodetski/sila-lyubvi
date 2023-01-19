@@ -1,29 +1,19 @@
 import { Divider } from "@mui/material";
 import React from "react";
-import EventCard from "./EventCard";
+import CustomCard from "./EventCard";
 import Carousel from "react-slick";
 import CustomButton from "./CustomButton";
+import CarouselBlock from "./CarouselBlock";
 
-const Events = ({ topic, subtopic1, subtopic2, discription, buttonTitle }) => {
-  function SampleNextArrow(props) {
-    const { className, onClick } = props;
-    return <button className={className} onClick={onClick} />;
-  }
-
-  function SamplePrevArrow(props) {
-    const { className, onClick } = props;
-    return <div className={className} onClick={onClick} />;
-  }
-  const stylesCardImportantEvents = {
-    minHeight: "640px",
-    minWwidth: "670px",
-    margin: "10px",
-  };
-  const stylesCardCloserEvents = {
-    minHeight: "427px",
-    minWwidth: "550px",
-    margin: "10px",
-  };
+const Events = ({
+  CustomCard,
+  cardStyles,
+  topic,
+  subtopic1,
+  subtopic2,
+  discription,
+  buttonTitle,
+}) => {
   return (
     <div>
       <div className="pageStyle">
@@ -33,79 +23,61 @@ const Events = ({ topic, subtopic1, subtopic2, discription, buttonTitle }) => {
             <span className="gradientText">{topic.wordGradient}</span>
           </h2>
         </div>
-        <div style={{ display: "flex", flexDirection: "row" }}>
-          <p
-            className="title-h4"
-            style={{ width: "50%" }}
-          >
-            {discription.discription}
-          </p>
-          <p
-          className="title-text"
-            style={{
-              width: "50%",
-              whiteSpace: "pre-line",
-            }}
-          >
-            {discription.discription2}
-          </p>
-        </div>
+        {discription && (
+          <div style={{ display: "flex", flexDirection: "row" }}>
+            <p
+              className="title-h4"
+              style={{ width: "50%", paddingRight: "0 15px" }}
+            >
+              {discription.discription}
+            </p>
+            <p
+              className="title-text"
+              style={{
+                width: "50%",
+                whiteSpace: "pre-line",
+                paddingLeft: "30px",
+              }}
+            >
+              {discription.discription2}
+            </p>
+          </div>
+        )}
         <h3 className="title-h3">{subtopic1}</h3>
 
         <Divider classes={{ root: "mydivider" }} />
-        <br/>
-        <div className="carouselWrapper">
-          <Carousel
-            // dots={true}
-            infinite={true}
-            speed={500}
-            slidesToShow={2}
-            slidesToScroll={1}
-            className={"center"}
-            display="true"
-            centerMode={true}
-            centerPadding={"0px"}
-            nextArrow={<SampleNextArrow />}
-            prevArrow={<SamplePrevArrow />}
-          >
-            <EventCard styles={stylesCardImportantEvents} />
-
-            <EventCard styles={stylesCardImportantEvents} />
-            <EventCard styles={stylesCardImportantEvents} />
-            <EventCard styles={stylesCardImportantEvents} />
-            <EventCard styles={stylesCardImportantEvents} />
-          </Carousel>
-        </div>
+        <CarouselBlock CustomCard={CustomCard} styles={cardStyles.big} />
 
         <h3 className="title-h3">{subtopic2}</h3>
         <Divider classes={{ root: "mydivider" }} />
-        <br/>
         <div>
           <div
             style={{
               display: "flex",
               flexDirection: "row",
               justifyContent: "center",
+              marginLeft: '-30px'
             }}
           >
-            <EventCard styles={stylesCardCloserEvents} />
+            <CustomCard styles={cardStyles.small} />
 
-            <EventCard styles={stylesCardCloserEvents} />
-            <EventCard styles={stylesCardCloserEvents} />
+            <CustomCard styles={cardStyles.small} />
+            <CustomCard styles={cardStyles.small} />
           </div>
           <div
             style={{
               display: "flex",
               flexDirection: "row",
               justifyContent: "center",
+              marginLeft: '-30px'
             }}
           >
-            <EventCard styles={stylesCardCloserEvents} />
+            <CustomCard styles={cardStyles.small} />
 
-            <EventCard styles={stylesCardCloserEvents} />
-            <EventCard styles={stylesCardCloserEvents} />
+            <CustomCard styles={cardStyles.small} />
+            <CustomCard styles={cardStyles.small} />
           </div>
-          <div style={{ display: "flex", justifyContent: "center" }}>
+          <div style={{ display: "flex", justifyContent: "center", marginTop: "10px" }}>
             <CustomButton
               title={buttonTitle}
               style={{
@@ -113,6 +85,7 @@ const Events = ({ topic, subtopic1, subtopic2, discription, buttonTitle }) => {
                 height: "61px",
                 fontWeight: "500px",
                 lineHeight: "17px",
+                
               }}
             />
           </div>

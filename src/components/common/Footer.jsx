@@ -127,7 +127,7 @@ const Footer = () => {
         >
           <YouTube
             sx={{
-              color: "white",
+              color: "#FFFFFF",
               fontSize: 30,
             }}
           />
@@ -140,7 +140,7 @@ const Footer = () => {
         >
           <Telegram
             sx={{
-              color: "white",
+              color: "#FFFFFF",
               fontSize: 30,
             }}
           />

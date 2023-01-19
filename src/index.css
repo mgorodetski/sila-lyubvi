@@ -19,5 +19,6 @@ body,
   --tomato-custom: #FB6F92;
   --button-text-white: #F2F2F2;
   --gradient-primary: linear-gradient(90.05deg, var(--blue-light-custom) -26.13%, var(--blue-dark-custom) 30.71%, var(--tomato-custom) 102.5%);
-}
+  --button-push-color: linear-gradient(var(--blue-light-custom), var(--blue-dark-custom), var(--tomato-custom));
 
+}
