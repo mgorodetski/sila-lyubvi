@@ -57,7 +57,6 @@ const CulturalEvents = () => {
                     <EventCard
                         styles={stylesCardImportantEvents}
                     />
-
                     <EventCard
                         styles={stylesCardImportantEvents}
                     />
@@ -115,4 +114,3 @@ const CulturalEvents = () => {
 
 
 export default CulturalEvents
-

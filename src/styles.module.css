@@ -46,11 +46,7 @@
 .box-footer {
     width: 100%;
     min-height: 389px;
-    /* left: 0px;
-    top: 6373px; */
-
-    /* Gradient */
-    background: linear-gradient(90.05deg, #2E89DC -26.13%, #4361EE 30.71%, #FB6F92 102.5%);
+    background: var(--gradient-primary);
 }
 
 .footer-links {

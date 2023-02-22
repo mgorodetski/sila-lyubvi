@@ -22,6 +22,12 @@ const About = () => {
                         style={{
                             width: '204px',
                             height: '61px',
+
+                            background: 'var(--gradient-primary)',
+                            borderRadius: '30px',
+                            color: '#F2F2F2',
+                            fontFamily: 'Inter',
+                            fontStyle: 'normal',
                             fontSize: '14px',
                             lineHeight: '17px'
                         }}

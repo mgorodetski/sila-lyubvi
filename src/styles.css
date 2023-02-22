@@ -66,7 +66,7 @@
     height: 4px;
     margin-bottom: 30px;
     /* Gradient */
-    background: var(--gradient-primary);
+    background-color: var(--gradient-primary);
 }
 
 /* About */
@@ -77,9 +77,6 @@
 .title-h1 {
     width: 801px;
     height: 214px;
-
-    font-family: 'Inter';
-    font-style: 'normal';
     font-weight: 700;
     font-size: 82px;
     line-height: 130%;
@@ -92,36 +89,25 @@
 .title-h2 {
     width: 725px;
     height: 62px;
-
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 700;
     font-size: 48px;
     line-height: 130%;
     /* or 62px */
-
     text-transform: uppercase;
-
-    /* color: var(--main-text-color); */
+    color: #454444;
 }
 
 .title-h3 {
     width: 533px;
     height: 45px;
     margin: 0;
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 500;
     font-size: 35px;
     line-height: 130%;
-    /* or 45px */
-
-    /* color: var(--main-text-color); */
+    color: #454444;
 }
 
 .title-text {
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 130%;
@@ -153,11 +139,7 @@
 .box-footer {
     width: 100%;
     min-height: 389px;
-    /* left: 0px;
-    top: 6373px; */
-
-    /* Gradient */
-    background: var(--gradient-primary)
+    background: var(--gradient-primary);
 }
 
 .footer-links {
