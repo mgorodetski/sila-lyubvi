@@ -34,7 +34,7 @@
 }
 
 .cardBorder.MuiCard-root {
-
+    
     border-radius: 19px;
     border-style: hidden;
     box-shadow: none;
@@ -43,6 +43,7 @@
 }
 
 .card {
+    
     box-shadow: 2px 2px 20px rgba(46, 137, 220, 0.3);
     border: 1px solid transparent;
     border-radius: 20px;

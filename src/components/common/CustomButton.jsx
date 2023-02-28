@@ -1,6 +1,7 @@
 import styles from "../../styles.module.css";
 
 const CustomButton = ({ title, handleClick, style }) => {
+  
   return (
     <button
       type="button"

@@ -16,6 +16,7 @@ const Home = () => {
       maxHeight: "640px",
       maxWidth: "670px",
       margin: "30px",
+      
     },
     small: {
       maxHeight: "550px",

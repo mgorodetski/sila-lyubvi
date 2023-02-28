@@ -33,152 +33,157 @@ const ProjectCard = ({ handleClick, styles }) => {
   //' 'style' doesn't work'
   return (
     <div className="card" style={styles}>
-      <Card
-        classes={{ root: "cardBorder" }}
-        sx={{
-          fontFamily: "Inter",
-          maxHeight: styles.maxHeight,
-          maxWidth: styles.maxWidth,
-        }}
-      >
-        <div style={{ margin: 0, padding: 0, position: "relative" }}>
-          <CardActions
-            disableSpacing={true}
-            sx={{
-              display: "flex",
-              justifyContent: "flex-end",
-              position: "absolute",
-              top: "20px",
-              right: "20px",
-            }}
-          >
-            <IconButton
-              onClick={() => alert("favorite")}
-              aria-label="add to favorites"
+      <div className={"cardBorder"} style={{ padding: "25px" }}>
+        <Card
+          sx={{
+            border: "none",
+            borderRadius: "0px",
+            boxShadow: "none",
+            maxHeight: styles.maxHeight,
+            maxWidth: styles.maxWidth,
+          }}
+        >
+          <div style={{ margin: 0, padding: 0, position: "relative" }}>
+            <CardActions
+              disableSpacing={true}
               sx={{
-                width: "40px",
-                height: "40px",
-                background: "var(--main-text-color)",
-                color: "#FFFFFF",
-                opacity: 0.5,
+                display: "flex",
+                justifyContent: "flex-end",
+                position: "absolute",
+                top: "20px",
+                right: "20px",
               }}
             >
-              {favorite ? (
-                <FavoriteIconFill
-                  sx={{
-                    color: "#FFFFFF",
-                    opacity: 4,
-                    zIndex: 999,
-                  }}
-                />
-              ) : (
-                <FavoriteIcon
-                  sx={{
-                    color: "#FFFFFF",
-                    opacity: 4,
-                    zIndex: 999,
-                  }}
-                />
-              )}
-            </IconButton>
-          </CardActions>
-          <div
-            className={moduleStyles.costLabel}
-            style={{
-              position: "absolute",
-              bottom: "13px",
-              right: "13px",
-            }}
-          >
-            {data.cost}
+              <IconButton
+                onClick={() => alert("favorite")}
+                aria-label="add to favorites"
+                sx={{
+                  width: "40px",
+                  height: "40px",
+                  background: "var(--main-text-color)",
+                  color: "#FFFFFF",
+                  opacity: 0.5,
+                }}
+              >
+                {favorite ? (
+                  <FavoriteIconFill
+                    sx={{
+                      color: "#FFFFFF",
+                      opacity: 4,
+                      zIndex: 999,
+                    }}
+                  />
+                ) : (
+                  <FavoriteIcon
+                    sx={{
+                      color: "#FFFFFF",
+                      opacity: 4,
+                      zIndex: 999,
+                    }}
+                  />
+                )}
+              </IconButton>
+            </CardActions>
+            <div
+              className={moduleStyles.costLabel}
+              style={{
+                position: "absolute",
+                bottom: "13px",
+                right: "13px",
+              }}
+            >
+              {data.cost}
+            </div>
+            <CardMedia
+              onClick={() => alert("media")}
+              component="img"
+              image="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2532&q=80"
+              alt="Paella dish"
+            />
           </div>
-          <CardMedia
-            onClick={() => alert("media")}
-            component="img"
-            image="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2532&q=80"
-            alt="Paella dish"
-          />
-        </div>
-        <CardActionArea>
-          <CardContent
-            sx={{
-              padding: "25px",
-            }}
-          >
-            <p
-              style={{
-                padding: "15px 0 0",
-                margin: 0,
-                fontSize: "20px",
-                lineHeight: "26px",
-                color: "var(--main-text-color)",
+          <CardActionArea sx={{}}>
+            <CardContent
+              sx={{
+                fontFamily: "Inter, sans-serif",
+                padding: "0",
               }}
             >
-              {data.title}
-            </p>
-
-            <p
-              style={{
-                padding: "10px 0 0",
-                margin: 0,
-                fontSize: "16px",
-                lineHeight: "19px",
-                color: "var(--secondary-text-color)",
-              }}
-            >
-              {data.city}
-            </p>
-            {/* <p
-              style={{
-                padding: "10px 0 0",
-                margin: 0,
-                fontSize: "14px",
-                lineHeight: "17px",
-                color: "var(--secondary-text-color)",
-              }}
-            >
-              {data.place}
-            </p> */}
-            <p
-              style={{
-                padding: "10px 0 0",
-                margin: 0,
-                fontSize: "14px",
-                lineHeight: "130%",
-                color: "var(--main-text-color)",
-              }}
-            >
-              {data.text}
-            </p>
-            {/* 580px - maxHeight of big ProjectCard */}
-            <div style={styles.maxHeight === "580px" ? bigStyle.style : {}}>
               <p
                 style={{
-                  paddingTop: smallCardPad1,
+                  padding: "15px 0 0",
                   margin: 0,
-                  fontSize: "14px",
-                  lineHeight: "17px",
-                  textDecoration: "underline",
+                  fontSize: "20px",
+                  lineHeight: "26px",
+                  color: "var(--main-text-color)",
+                }}
+              >
+                {data.title}
+              </p>
+
+              <p
+                style={{
+                  padding: "10px 0 0",
+                  margin: 0,
+                  fontSize: "16px",
+                  lineHeight: "19px",
                   color: "var(--secondary-text-color)",
                 }}
               >
-                {data.organizator}
+                {data.city}
               </p>
+              {/* <p
+                style={{
+                  padding: "10px 0 0",
+                  margin: 0,
+                  fontSize: "14px",
+                  lineHeight: "17px",
+                  color: "var(--secondary-text-color)",
+                }}
+              >
+                {data.place}
+              </p> */}
               <p
                 style={{
-                  paddingTop: smallCardPad2,
+                  padding: "10px 0 0",
                   margin: 0,
                   fontSize: "14px",
                   lineHeight: "130%",
                   color: "var(--main-text-color)",
                 }}
               >
-                Прием заявок до: {data.date}
+                {data.text}
               </p>
-            </div>
-          </CardContent>
-        </CardActionArea>
-      </Card>
+              {/* 580px - maxHeight of big ProjectCard */}
+              <div style={styles.maxHeight === "580px" ? bigStyle.style : {}}>
+                <p
+                  style={{
+                    paddingTop: smallCardPad1,
+                    margin: 0,
+                    fontSize: "14px",
+                    lineHeight: "17px",
+                    textDecoration: "underline",
+                    color: "var(--secondary-text-color)",
+                  }}
+                >
+                  {data.organizator}
+                </p>
+                <p
+                  style={{
+                    paddingTop: smallCardPad2,
+
+                    margin: 0,
+                    fontSize: "14px",
+                    lineHeight: "130%",
+                    color: "var(--main-text-color)",
+                  }}
+                >
+                  Прием заявок до: {data.date}
+                </p>
+              </div>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+      </div>
     </div>
   );
 };
