@@ -2,34 +2,25 @@
 
 
 
-.buttonInTheCard {
-    vertical-align: middle;
-    text-align: center;
+.costLabel {
+    background: var(--gradient-primary);
+    color: var(--button-text-white);
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 14px;
+    line-height: 17px;
+
     width: 103px;
     height: 28px;
-    line-height: 28px;
-    position: relative;
-    z-index: 0;
-}
 
-.buttonInTheCard:before {
+    /* position: "absolute"; //doesn't work in this place!!  - ???
+    bottom: "13px";
+    right: "13px"; */
 
-    content: "";
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    padding: 1px;
-    border-radius: 30px;
-    background: var(--gradient-primary);
-    -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-    mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
+    cursor: pointer;
 }
 
 .btn {
@@ -39,7 +30,19 @@
     border: none;
     width: 114px;
     height: 45px;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+
 }
+
+.btn:hover {
+    transform: scale(1.05); 
+}
+
+.btn:active {
+    background: var(--button-push-color);
+  }
 
 
 /* Footer */
@@ -53,7 +56,6 @@
     display: flex;
     flex-direction: column;
     padding-top: 20px;
-
 }
 
 .footer-links>a {
