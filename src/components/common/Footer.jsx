@@ -86,6 +86,9 @@ const Footer = () => {
           <Link style={linkStyle} href="#">
             БЛОГ
           </Link>
+          <Link style={linkStyle} href="#">
+            ПОДДЕРЖАТЬ
+          </Link>
         </div>
         <div
           style={{

@@ -1,9 +1,10 @@
 import SearchIcon from '@mui/icons-material/Search';
-import { Box, IconButton, Typography } from '@mui/material';
+import { Box, IconButton, Link, Typography } from '@mui/material';
 import InputBase from '@mui/material/InputBase';
 import React from 'react';
 import CustomButton from './CustomButton';
 import logo from '../../img/logo.svg';
+import { linkStyle } from '../../utils/constants';
 
 
 const Topbar = () => {
@@ -29,7 +30,7 @@ const Topbar = () => {
                 <CustomButton title="войти" />
             </Box>
               {/* Navigation */}
-            <Box display="flex" p={1}>
+            <Box display="flex" justifyContent="space-between" maxWidth="900px" margin="auto" p={1}>
                 <Typography>культурные мероприятия</Typography>
                 <Typography>психологическая поддержка</Typography>
                 <Typography>деловое сотрудничество</Typography>

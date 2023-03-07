@@ -20,5 +20,6 @@ export const mentalSupportDiscription = () => {
     return mentalSupportDiscription;
 }
 
-
-
+export const linkStyle = {
+    underline: "none", target: "_blank", rel: "noopener noreferrer", cursor: "pointer"
+};

@@ -1,19 +1,24 @@
-import Footer from "./components/common/Footer";
-import Topbar from "./components/common/TopBar";
-import Main from "./global/Main";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import MainPage from "./pages/MainPage";
 import './styles.css';
 import './styles.module.css';
+import MentalSupport from "./global/MentalSupport";
+import PsychoSupport from "./pages/PsychoSupport";
 
 
 
 function App() {
 
   return (
-    <div>
-      <Topbar/>
-      <Main />
-      <Footer/>
-    </div>
+    <>
+      <BrowserRouter >
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/psycho-support" element={<PsychoSupport />} />
+
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
